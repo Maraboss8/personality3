@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Αποτελέσματα Τεστ Προσωπικότητας</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .results-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .personality-type {
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+
+        .personality-type:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .personality-title {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .personality-emoji {
+            font-size: 2.5rem;
+        }
+
+        .personality-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #34495e;
+        }
+
+        .loading-container {
+            display: none;
+            text-align: center;
+            margin: 2rem auto;
+            max-width: 400px;
+        }
+
+        .loading-text {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .loading-bar {
+            width: 100%;
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .loading-progress {
+            width: 0%;
+            height: 100%;
+            background-color: #3498db;
+            transition: width 2s ease-in-out;
+        }
+
+        .restart-button {
+            display: block;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            color: white;
+            background: #3498db;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .restart-button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container" id="loadingContainer">
+        <div class="loading-text">Αναλύουμε τα αποτελέσματά σας!</div>
+        <div class="loading-bar">
+            <div class="loading-progress" id="loadingProgress"></div>
+        </div>
+    </div>
+
+    <div class="results-container" id="resultsContainer" style="display: none;">
+        <div id="personalityResults"></div>
+    </div>
+
+    <script src="results.js"></script>
+</body>
+</html>

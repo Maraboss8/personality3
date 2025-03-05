@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Τεστ Προσωπικότητας</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="progress-container">
+            <div class="question-counter">Question <span id="current-question">1</span>/30</div>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <h2 id="question-text">Loading question...</h2>
+            <div class="options-container">
+                <div class="radio-group">
+                    <input type="radio" name="answer" value="3" id="strongly-agree-3">
+                    <input type="radio" name="answer" value="2" id="strongly-agree-2">
+                    <input type="radio" name="answer" value="1" id="strongly-agree-1">
+                    <input type="radio" name="answer" value="0" id="neutral">
+                    <input type="radio" name="answer" value="-1" id="strongly-disagree-1">
+                    <input type="radio" name="answer" value="-2" id="strongly-disagree-2">
+                    <input type="radio" name="answer" value="-3" id="strongly-disagree-3">
+                    <div class="radio-buttons">
+                        <label for="strongly-agree-3" class="radio-label agree"></label>
+                        <label for="strongly-agree-2" class="radio-label agree"></label>
+                        <label for="strongly-agree-1" class="radio-label agree"></label>
+                        <label for="neutral" class="radio-label neutral"></label>
+                        <label for="strongly-disagree-1" class="radio-label disagree"></label>
+                        <label for="strongly-disagree-2" class="radio-label disagree"></label>
+                        <label for="strongly-disagree-3" class="radio-label disagree"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-buttons">
+            <button id="prev-btn" disabled>Previous</button>
+            <button id="next-btn" disabled>Next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
